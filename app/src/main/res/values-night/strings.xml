@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_titulo">Simple Chat en tiempo real</string>
+    <string name="input_nombre">Ingrese su nombre</string>
+    <string name="input_sala">input_sala</string>
+    <string name="ingresar">Ingresar</string>
+</resources>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_layout_chat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".fragmets.ChatFragment">
+
+    <LinearLayout
+        android:id="@+id/llayout_text_userConected"
+        android:layout_width="119dp"
+        android:layout_height="629dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="30dp"
+        app:layout_constraintEnd_toStartOf="@id/layout_text_chat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/input_layout_chat">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/input_layout_chat"
+        android:layout_width="409dp"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+>
+
+        <EditText
+            android:id="@+id/input_txt_msg"
+            android:layout_width="319dp"
+            android:layout_height="66dp"
+            android:layout_marginStart="4dp"
+            android:ems="10"
+            android:hint="Mensaje...."
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_enviar_msg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.642" />
+
+        <Button
+            android:id="@+id/btn_enviar_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Enviar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/input_txt_msg"
+            app:layout_constraintTop_toTopOf="@+id/input_txt_msg" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_text_chat"
+        android:layout_width="287dp"
+        android:layout_height="660dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="1dp"
+        app:layout_constraintBottom_toTopOf="@id/input_layout_chat"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/llayout_text_userConected">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_desconectar"
+        android:layout_width="119dp"
+        android:layout_height="47dp"
+        android:text="Salir"
+        app:layout_constraintBottom_toTopOf="@id/llayout_text_userConected"
+        app:layout_constraintEnd_toStartOf="@id/layout_text_chat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
